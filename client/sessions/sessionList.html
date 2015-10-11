@@ -1,0 +1,10 @@
+<template name="sessionList">
+    <button class="addSession">create Session</button>
+    <h2>Session list</h2>
+    <ul class="sessionList">
+        {{#each items}}
+            <li><a href="/sessions/{{_id}}">{{name}}</a></li>
+        {{/each}}
+    </ul>
+    <a class="session-list-url logout" href="#">Logout</a>
+</template>

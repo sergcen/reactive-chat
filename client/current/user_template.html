@@ -1,0 +1,14 @@
+<template name="user_template">
+    <div class="user-block {{state}}" style="{{style}}">
+        <div class="name">{{name}}</div>
+        <div class="head"></div>
+        <div class="body">
+            <img src="//graph.facebook.com/{{fid}}/picture?type=large">
+        </div>
+        <div class="legs leg1"></div>
+        <div class="legs leg2"></div>
+        {{#if text}}
+            <div class="message">{{text}}</div>
+        {{/if}}
+    </div>
+</template>

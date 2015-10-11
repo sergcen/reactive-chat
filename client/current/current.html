@@ -1,0 +1,20 @@
+<template name="current">
+    <div class="content">
+        <div class="objects">
+            {{#each objects}}
+            {{> object_item}}
+            {{/each}}
+        </div>
+        <div class="users">
+
+            {{#each users}}
+                {{> user_template}}
+            {{/each}}
+        </div>
+
+        <div class="input-wr">
+            <input type="text" placeholder="text, image url, or youtube url">
+        </div>
+    </div>
+    <a class="session-list-url" href="/">Session list</a>
+</template>

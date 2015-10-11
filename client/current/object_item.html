@@ -1,0 +1,21 @@
+<template name="object_item">
+    <div class="object_item {{type}} {{#if isDrag}}isDrag{{/if}} {{#if inited}}inited{{/if}}" style="{{style}}">
+        {{#if istype 'image'}}
+            <img class="image" draggable="false" src="{{url}}">
+        {{/if}}
+        {{#if istype 'youtube'}}
+            <iframe src="https://www.youtube.com/embed/{{id}}" frameborder="0" allowfullscreen></iframe>
+        {{/if}}
+        {{#if istype 'text'}}
+            {{#if isEdit}}
+                <input type="text" value="{{text}}">
+            {{else}}
+                {{text}}
+            {{/if}}
+        {{/if}}
+        {{#if istype 'url'}}
+            <a href="{{url}}" target="_blank">{{url}}</a>
+        {{/if}}
+        <a class="remove"></a>
+    </div>
+</template>
